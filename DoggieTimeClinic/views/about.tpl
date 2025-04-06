@@ -6,23 +6,23 @@
 <ul>
     <li>
         <figure>
-            <img src="\static\images\vet1.jpg" alt="Image" width="300px"/>
+            <img src="\static\images\vet1.jpg" alt="Image" width="300px" height="500px" />
             <figcaption class="doctors-name">Anna Asti</figcaption>
         </figure>
         <figure>
-            <img src="\static\images\vet2.jpg" alt="Image" width="300px"/>
+            <img src="\static\images\vet2.jpg" alt="Image" width="300px" height="500px"/>
             <figcaption class="doctors-name">Policarp Afroditov</figcaption>
         </figure>
     </li>
     <li>
         <figure>
-            <img src="\static\images\vet3.jpg" alt="Image" width="300px"/>
+            <img src="\static\images\vet3.jpg" alt="Image" width="300px" height="500px"/>
             <figcaption class="doctors-name">Policarp Afroditov</figcaption>
         </figure>
     </li>
     <li>
         <figure>
-            <img src="\static\images\vet4.jpg" alt="Image" width="300px"/>
+            <img src="\static\images\vet4.jpg" alt="Image" width="300px" height="500px"/>
             <figcaption class="doctors-name">Policarp Afroditov</figcaption>
         </figure>
     </li>
