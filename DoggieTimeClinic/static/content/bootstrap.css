@@ -136,15 +136,12 @@ sub {
 }
 
 .img-same-size {
-    width: 00px;
+    width: 350px;
     height: 300px;
     object-fit: scale-down;
 }
 .inline-block {
     display: inline-block;
-}
-.name_vet{
-    text-size-adjust: 
 }
 
 svg:not(:root) {
