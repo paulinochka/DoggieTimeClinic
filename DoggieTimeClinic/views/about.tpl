@@ -17,13 +17,13 @@
     <li>
         <figure>
             <img src="\static\images\vet3.jpg" alt="Image" width="300px" height="500px"/>
-            <figcaption class="doctors-name">Policarp Afroditov</figcaption>
+            <figcaption class="doctors-name">Kristina Orzo</figcaption>
         </figure>
     </li>
     <li>
         <figure>
             <img src="\static\images\vet4.jpg" alt="Image" width="300px" height="500px"/>
-            <figcaption class="doctors-name">Policarp Afroditov</figcaption>
+            <figcaption class="doctors-name">Aleksios Bartucci</figcaption>
         </figure>
     </li>
 </ul>
