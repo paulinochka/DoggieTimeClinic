@@ -22,9 +22,12 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="/home"> MainPage</a></li>
+                    <li><a href="/home">MainPage</a></li>
                     <li><a href="/about">Our health</a></li>
                     <li><a href="/contact">Contact us</a></li>
+                    <li><a href="/events">Events</a></li>
+                    <li><a href="/active">Active</a></li>
+                    <li><a href="/partners">Partners</a></li>
                 </ul>
             </div>
         </div>

@@ -39,7 +39,7 @@ def about():
 def usefulText():
     """Renders the events page."""
     return dict(
-        title='events',
+        title='Events',
         message='Old and new events right here',
         year=datetime.now().year
     )
@@ -49,7 +49,7 @@ def usefulText():
 def usefulText():
     """Renders the partners page."""
     return dict(
-        title='partners',
+        title='Partners',
         message='Our partners right here',
         year=datetime.now().year
     )
@@ -59,7 +59,7 @@ def usefulText():
 def usefulText():
     """Renders the active page."""
     return dict(
-        title='active',
+        title='Active',
         message='Yours active right here',
         year=datetime.now().year
     )
