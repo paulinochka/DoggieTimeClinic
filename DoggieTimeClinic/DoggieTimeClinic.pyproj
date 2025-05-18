@@ -18,7 +18,7 @@
     <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
     <Name>DoggieTimeClinic</Name>
     <RootNamespace>DoggieTimeClinic</RootNamespace>
-    <InterpreterId>MSBuild|Clinic|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>MSBuild|ClinicTwo|$(MSBuildProjectFullPath)</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -69,8 +69,18 @@
     <Content Include="views\contact.tpl" />
     <Content Include="views\index.tpl" />
     <Content Include="views\layout.tpl" />
+    <Content Include="views\events.tpl" />
   </ItemGroup>
   <ItemGroup>
+    <Interpreter Include="ClinicTwo\">
+      <Id>ClinicTwo</Id>
+      <Version>3.9</Version>
+      <Description>ClinicTwo (Python 3.9 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
     <Interpreter Include="Clinic\">
       <Id>Clinic</Id>
       <Version>3.9</Version>

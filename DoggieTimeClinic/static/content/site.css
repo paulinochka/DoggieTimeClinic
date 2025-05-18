@@ -40,3 +40,109 @@ input[type="checkbox"].input-validation-error {
 .validation-summary-valid {
     display: none;
 }
+
+.newButtonDFLT {
+    transition: all 0.5s;
+    cursor: pointer;
+    display: inline-block;
+    margin: 5px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 4px;
+    color: black;
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+    .newButtonDFLT:hover {
+        background-color: black;
+        color: white;
+        text-decoration: none;
+    }
+
+    .newButtonDFLT span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+        .newButtonDFLT span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+    .newButtonDFLT:hover span {
+        padding-right: 25px;
+    }
+
+        .newButtonDFLT:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.divMargin{
+    margin-top: 80px;
+}
+
+.divMarginBottom {
+    margin-top: 10px;
+}
+
+.bigButton {
+    display: inline-block;
+    border-radius: 4px;
+    font-size: 28px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    margin: 5px;
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+    padding: 24px 48px;
+    text-align: center;
+    text-decoration: none;
+}
+
+    .bigButton:hover {
+        background-color: black;
+        color: white;
+        text-decoration: none;
+    }
+
+    .bigButton span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+        .bigButton span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+    .bigButton:hover span {
+        padding-right: 25px;
+    }
+
+        .bigButton:hover span:after {
+            opacity: 1;
+            right: 0;
+        }

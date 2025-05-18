@@ -33,3 +33,13 @@ def about():
         message='Your application description page.',
         year=datetime.now().year
     )
+
+@route('/events')
+@view('events')
+def usefulText():
+    """Renders the events page."""
+    return dict(
+        title='events',
+        message='Old and new events right here',
+        year=datetime.now().year
+    )
