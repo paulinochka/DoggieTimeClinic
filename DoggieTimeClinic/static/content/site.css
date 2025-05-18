@@ -47,7 +47,7 @@ input[type="checkbox"].input-validation-error {
     display: inline-block;
     margin: 5px;
     background-color: white;
-    border: 2px solid black;
+    border: 1px solid black;
     border-radius: 4px;
     color: black;
     padding: 10px 16px;
@@ -106,9 +106,8 @@ input[type="checkbox"].input-validation-error {
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
-    margin: 5px;
     background-color: white;
-    border: 2px solid black;
+    border: 1px solid black;
     color: black;
     padding: 24px 48px;
     text-align: center;
@@ -213,3 +212,82 @@ input[type="checkbox"].input-validation-error {
     font-size: 50px;
     text-align: center;
 }
+
+.divInputMargin {
+    margin-top: 20px;
+}
+.inputStyle {
+    width: 100%; /* Ширина поля */
+    padding: 10px 15px; /* Внутренние отступы */
+    margin: 10px 10px; /* Внешние отступы */
+    border: 1px solid black; /* Граница */
+    border-radius: 4px; /* Скругление углов */
+    box-sizing: border-box; /* Учет padding в ширине */
+    font-size: 20px; /* Размер шрифта */
+    background-color: white; /* Цвет фона */
+    color: gray; 
+}
+
+.inputRow {
+    display: flex;
+    gap: 15px; /* Расстояние между полями */
+    margin-bottom: 15px;
+}
+
+.textareaRow {
+    width: 100%;
+    gap: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-container {
+    width: 100%;
+    max-width: 800px;
+}
+
+.middleButton {
+    display: inline-block;
+    border-radius: 4px;
+    font-size: 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    padding: 18px 28px;
+    text-align: center;
+    text-decoration: none;
+}
+
+    .middleButton:hover {
+        background-color: black;
+        color: white;
+        text-decoration: none;
+    }
+
+    .middleButton span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+        .middleButton span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+    .middleButton:hover span {
+        padding-right: 25px;
+    }
+
+        .middleButton:hover span:after {
+            opacity: 1;
+            right: 0;
+        }

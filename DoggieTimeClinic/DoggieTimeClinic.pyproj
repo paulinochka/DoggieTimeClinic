@@ -29,6 +29,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="addEvent.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="app.py" />
     <Compile Include="routes.py" />
   </ItemGroup>
@@ -46,7 +49,7 @@
     <Content Include="static\content\bootstrap.css" />
     <Content Include="static\content\bootstrap.min.css" />
     <Content Include="static\content\site.css" />
-    <Content Include="static\otherFiles\events.txt" />
+    <Content Include="static\otherFiles\events.json" />
     <Content Include="static\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="static\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="static\fonts\glyphicons-halflings-regular.ttf" />
