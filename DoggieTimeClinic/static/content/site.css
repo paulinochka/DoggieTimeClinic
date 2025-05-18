@@ -99,7 +99,6 @@ input[type="checkbox"].input-validation-error {
 .divMarginBottom {
     margin-top: 10px;
 }
-
 .bigButton {
     display: inline-block;
     border-radius: 4px;
@@ -146,3 +145,71 @@ input[type="checkbox"].input-validation-error {
             opacity: 1;
             right: 0;
         }
+
+.rectangle {
+    width: 500px;
+    height: 90px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divMarginTitle {
+    margin-top: 50px;
+}
+
+.titleStyle {
+    color: black;
+    font-size: 50px;
+    text-align: center;
+}
+
+.line {
+    border: 0;
+    height: 2px; 
+    background-color: black;
+    margin: 30px 0; 
+}
+
+.eventsRectangle {
+    width: 500px;
+    height: 100px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+    .eventsRectangle:hover {
+        transform: scale(1.2);
+        background: black;
+        z-index: 1; 
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+    .eventsRectangle:hover .eventsStyle {
+        color: white; 
+    }
+
+.eventsRectangleContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+
+.eventsStyle {
+    color: black;
+    font-size: 40px;
+    text-align: center;
+}
+
+.selectEventsStyle {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+}
