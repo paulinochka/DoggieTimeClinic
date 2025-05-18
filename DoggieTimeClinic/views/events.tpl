@@ -23,8 +23,9 @@
                 <h1 class="eventsStyle">Our future events!</h1>
             </div>
             <div class="eventsRectangle">
-                <h1 class="eventsStyle">Our future events!</h1>
+                <h1 class="eventsStyle"></h1>
             </div>
+            
         </div>
 
         <div class= "divMarginTitle">
@@ -37,16 +38,17 @@
         <div class = "divInputMargin">
             <div class="center">
                 <div class="form-container">
-                    <div class="inputRow">
-                        <input class="inputStyle" type="text" name="title" placeholder="Whats the name?"></input>
-                        <input class="inputStyle" type="text" name="organiser" placeholder="Who is the organizer?"></input>
-                        <input class="inputStyle" type="text" name="phone" placeholder="Organizers phone number"></input>
-                    </div>
-                    <div class="textareaRow">
-                        <textarea class="inputStyle" type="text" name="describe" placeholder="Describe the event"></textarea>
-                        <button type="submit" class="middleButton">Send</button>
-                    </div>
-                    
+                    <form action="/events" method="post">
+                        <div class="inputRow">
+                            <input class="inputStyle" type="text" name="title" placeholder="Whats the name?" required></input>
+                            <input class="inputStyle" type="text" name="organiser" placeholder="Who is the organizer?" required></input>
+                            <input class="inputStyle" type="text" name="phone" placeholder="Organizers phone number" required></input>
+                        </div>
+                        <div class="textareaRow">
+                            <textarea class="inputStyle" type="text" name="describe" placeholder="Describe the event" required></textarea>
+                            <button type="submit" class="middleButton">Send</button>
+                        </div>
+                    </form>
                 </div>
             </div>
     </div>
