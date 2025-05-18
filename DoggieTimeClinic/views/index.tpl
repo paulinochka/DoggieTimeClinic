@@ -49,12 +49,12 @@
     </div>
     <div class="col-md-4">
         <div class="center">
-        <a class="bigButton" href="/events"><span>Useful articles </span></a>
+        <a class="bigButton" href="/active"><span>Active</span></a>
         </div>
     </div>
     <div class="col-md-4">
         <div class="center">
-        <a class="bigButton" href="/events"><span>Useful articles </span></a>
+        <a class="bigButton" href="/partners"><span>Partners</span></a>
         </div>
     </div>
     </div>

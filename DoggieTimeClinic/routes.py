@@ -43,3 +43,23 @@ def usefulText():
         message='Old and new events right here',
         year=datetime.now().year
     )
+
+@route('/partners')
+@view('partners')
+def usefulText():
+    """Renders the partners page."""
+    return dict(
+        title='partners',
+        message='Our partners right here',
+        year=datetime.now().year
+    )
+
+@route('/active')
+@view('active')
+def usefulText():
+    """Renders the active page."""
+    return dict(
+        title='active',
+        message='Yours active right here',
+        year=datetime.now().year
+    )
