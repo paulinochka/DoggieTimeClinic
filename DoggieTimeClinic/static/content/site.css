@@ -217,20 +217,20 @@ input[type="checkbox"].input-validation-error {
     margin-top: 20px;
 }
 .inputStyle {
-    width: 100%; /* Ширина поля */
-    padding: 10px 15px; /* Внутренние отступы */
-    margin: 10px 10px; /* Внешние отступы */
-    border: 1px solid black; /* Граница */
-    border-radius: 4px; /* Скругление углов */
-    box-sizing: border-box; /* Учет padding в ширине */
-    font-size: 20px; /* Размер шрифта */
-    background-color: white; /* Цвет фона */
+    width: 400px;
+    padding: 10px 10px;
+    margin: 10px 10px; 
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 20px; 
+    background-color: white;
     color: gray; 
 }
 
 .inputRow {
     display: flex;
-    gap: 15px; /* Расстояние между полями */
+    gap: 15px; 
     margin-bottom: 15px;
 }
 
@@ -249,7 +249,7 @@ input[type="checkbox"].input-validation-error {
 .middleButton {
     display: inline-block;
     border-radius: 4px;
-    font-size: 20px;
+    font-size: 24px;
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
@@ -288,6 +288,88 @@ input[type="checkbox"].input-validation-error {
     }
 
         .middleButton:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+
+.partnersListContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+
+.partnerStyle {
+    color: black;
+    font-size: 36px;
+    text-align: center;
+}
+
+.partnersListChange {
+    width: 500px;
+    height: 100px;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease
+}
+    .partnersListChange:hover {
+        transform: scale(1.2);
+        background: white;
+        z-index: 1;
+    }
+        .partnersListChange:hover h1 {
+            color: darkorange;
+            font-size: 46px;
+            text-shadow: 0 0 20px orange;
+            transform: scale(1.1);
+        }
+
+.middleButtonPartner {
+    display: inline-block;
+    border-radius: 4px;
+    font-size: 24px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    padding: 18px 28px;
+    text-align: center;
+    text-decoration: none;
+}
+
+    .middleButtonPartner:hover {
+        background-color: darkOrange;
+        color: white;
+        text-decoration: none;
+        border: 1px solid darkorange;
+    }
+
+    .middleButtonPartner span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+        .middleButtonPartner span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+    .middleButtonPartner:hover span {
+        padding-right: 25px;
+    }
+
+        .middleButtonPartner:hover span:after {
             opacity: 1;
             right: 0;
         }

@@ -39,14 +39,18 @@
             <div class="center">
                 <div class="form-container">
                     <form action="/events" method="post">
-                        <div class="inputRow">
-                            <input class="inputStyle" type="text" name="title" placeholder="Whats the name?" required></input>
-                            <input class="inputStyle" type="text" name="organiser" placeholder="Who is the organizer?" required></input>
-                            <input class="inputStyle" type="text" name="phone" placeholder="Organizers phone number" required></input>
+                        <div class="center">
+                            <div class="inputRow">
+                                <input class="inputStyle" type="text" name="title" placeholder="Whats the name?" required></input>
+                                <input class="inputStyle" type="text" name="organiser" placeholder="Who is the organizer?" required></input>
+                                <input class="inputStyle" type="text" name="phone" placeholder="Organizers phone number" required></input>
+                            </div>
                         </div>
-                        <div class="textareaRow">
-                            <textarea class="inputStyle" type="text" name="describe" placeholder="Describe the event" required></textarea>
-                            <button type="submit" class="middleButton">Send</button>
+                        <div class ="center">
+                            <div class="textareaRow">
+                                <textarea class="inputStyle" type="text" name="describe" placeholder="Describe the event" required></textarea>
+                                <a type="submit" class="middleButton"><span>Send</span></a>
+                            </div>
                         </div>
                     </form>
                 </div>
