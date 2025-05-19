@@ -1,26 +1,47 @@
-from bottle import Bottle, post, run, request, template, static_file
+from datetime import datetime
+from bottle import route, template, post, request
 import json
 import re
 from pathlib import Path
 
 path = Path('static/otherFiles/events.json') 
-events = {}
 def update_json(title,organiser,phone,description):
+    try:
+        events = json.loads(path.read_text(encoding='utf-8'))
+    except (FileNotFoundError, json.JSONDecodeError):
+        events = {}
     events = json.loads(path.read_text(encoding='utf-8'))
     if (title in events): return False
-    events[title] = []
-    events[title].append([organiser, phone,description])
+    events[title] = {
+        "organiser": organiser,
+        "phone": phone,
+        "description": description
+    }
     path.write_text(json.dumps(events,indent=4),encoding='utf-8')
     return True
 
-# Хранение событий (временное, для примера)
-file = 'events.json'
+def json_to_list():
+    try:
+        events = json.loads(path.read_text(encoding='utf-8'))
+    except (FileNotFoundError, json.JSONDecodeError):
+        events = {}
+    return events
 
-@post('/events', method='post')
+@route('/events')
+@post('/events',method='post')
 def load_events():
-    title = request.forms.get('title');
-    organiser = request.forms.get('organiser');
-    phone = request.forms.get('phone');
-    description = request.forms.get('describe');
-    update_json(title,organiser,phone,description)
-    return template('events_list', events=events)
+    events = json_to_list()
+    
+    if request.method == 'POST':
+        title = request.forms.get('title')
+        organiser = request.forms.get('organiser')
+        phone = request.forms.get('phone')
+        description = request.forms.get('describe')
+
+        if all([title, organiser, phone, description]):
+            update_json(title, organiser, phone, description)
+            events = json_to_list()  # Обновляем события после добавления
+
+    return template('events', events=events,title="Events",year=datetime.now().year)
+
+

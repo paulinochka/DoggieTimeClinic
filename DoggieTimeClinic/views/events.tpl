@@ -17,15 +17,14 @@
     <div class = "divMargin">
         <div class="eventsRectangleContainer">
             <div class="eventsRectangle">
-                <h1 class="eventsStyle">Our visitors</h1>
+                <h1 class="eventsStyle">New doggy goggy</h1>
             </div>
             <div class="eventsRectangle">
-                <h1 class="eventsStyle">Our future events!</h1>
+                <h1 class="eventsStyle">Learn about doggy health</h1>
             </div>
-            <div class="eventsRectangle">
-                <h1 class="eventsStyle"></h1>
-            </div>
-            
+            % if events:
+                % include('events_list.tpl', events=events)
+            % end
         </div>
 
         <div class= "divMarginTitle">
@@ -49,7 +48,7 @@
                         <div class ="center">
                             <div class="textareaRow">
                                 <textarea class="inputStyle" type="text" name="describe" placeholder="Describe the event" required></textarea>
-                                <a type="submit" class="middleButton"><span>Send</span></a>
+                                <button type="submit" class="middleButton" ><span>Send</span></a>
                             </div>
                         </div>
                     </form>

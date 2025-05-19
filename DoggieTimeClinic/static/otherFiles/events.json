@@ -1,39 +1,12 @@
 {
-  "rgrgr": [
-    [
-      "grgrg",
-      "rgrg",
-      "rgrg"
-    ]
-  ],
-  "rgrgrt": [
-    [
-      "grgrg",
-      "rgrg",
-      "rgrg"
-    ]
-  ],
-  "f": [
-    [
-      "g",
-      "56",
-      "yh"
-    ]
-  ],
-  "grr": [
-    [
-      "grgr",
-      "grgrg",
-      "rgrg"
-    ]
-  ],
-  "rgr": [
-    [
-      "grg",
-      "rgrg",
-      "rgrg"
-    ]
-  ],
-  "%" "include('events_list'",
-  "events=events)"
+    "efefe": {
+        "organiser": "efefef",
+        "phone": "efefef",
+        "description": "efef"
+    },
+    "Blyat": {
+        "organiser": "Ya",
+        "phone": "+79319916462",
+        "description": "Eventttt"
+    }
 }

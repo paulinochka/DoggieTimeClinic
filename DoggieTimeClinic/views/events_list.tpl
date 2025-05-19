@@ -1,5 +1,6 @@
-% for title in events:
-<div class="eventsRectangle">
-    <h1 class="eventsStyle">{title}</h1>
-</div>
+
+% for event, event_data in events.items():
+    <div class="eventsRectangle">
+        <h1 class="eventsStyle">{{ event }}</h1>
+    </div>
 % end

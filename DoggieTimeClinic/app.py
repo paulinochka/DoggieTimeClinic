@@ -2,13 +2,20 @@
 This script runs the application using a development server.
 """
 
+from datetime import datetime
 import bottle
 import os
 import sys
-import addEvent
+from addEvent import load_events
 
+events = {}
 # routes contains the HTTP handlers for our server and must be imported.
 import routes
+
+# @bottle.route('/events')
+# def load_events_list():
+#     events = addEvent.json_to_list()
+#     return bottle.template('events', events=events)
 
 if '--debug' in sys.argv[1:] or 'SERVER_DEBUG' in os.environ:
     # Debug mode will enable more verbose output in the console window.
@@ -28,7 +35,7 @@ if __name__ == '__main__':
         PORT = int(os.environ.get('SERVER_PORT', '5555'))
     except ValueError:
         PORT = 5555
-
+    
     @bottle.route('/static/<filepath:path>')
     def server_static(filepath):
         """Handler for static files, used with the development server.
@@ -36,5 +43,6 @@ if __name__ == '__main__':
         the server should be configured to serve the static files."""
         return bottle.static_file(filepath, root=STATIC_ROOT)
 
+    bottle.route('/events', ['GET', 'POST'], load_events,title="Events",year=datetime.now().year)
     # Starts a local test server.
     bottle.run(server='wsgiref', host=HOST, port=PORT)
