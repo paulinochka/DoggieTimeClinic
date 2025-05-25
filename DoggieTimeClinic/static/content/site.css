@@ -179,6 +179,7 @@ input[type="checkbox"].input-validation-error {
     background-color: white;
     border: 2px solid black;
     border-radius: 15px;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -187,25 +188,31 @@ input[type="checkbox"].input-validation-error {
 }
     .eventsRectangle:hover {
         transform: scale(1.2);
-        background: black;
+        background: white;
         z-index: 1; 
         box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     }
-    .eventsRectangle:hover .eventsStyle {
-        color: white; 
+    .eventsRectangle.active {
+        height: 300px; 
     }
 
+.event-details {
+    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .eventsRectangleContainer {
     display: flex;
     flex-wrap: wrap;
     gap: 100px;
 }
-
 .eventsStyle {
     color: black;
     font-size: 40px;
     text-align: center;
 }
+
 
 .selectEventsStyle {
     color: white;

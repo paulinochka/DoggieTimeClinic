@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/content/bootstrap.css" />
+    <script src = "static/scripts/eventActivity.js"></script>
 </head>
 
 <body>
@@ -15,13 +16,7 @@
     </div>
 
     <div class = "divMargin">
-        <div class="eventsRectangleContainer">
-            <div class="eventsRectangle">
-                <h1 class="eventsStyle">New doggy goggy</h1>
-            </div>
-            <div class="eventsRectangle">
-                <h1 class="eventsStyle">Learn about doggy health</h1>
-            </div>
+        <div class="eventsRectangleContainer" >
             % if events:
                 % include('events_list.tpl', events=events)
             % end
@@ -55,4 +50,5 @@
                 </div>
             </div>
     </div>
+    
 </body>
