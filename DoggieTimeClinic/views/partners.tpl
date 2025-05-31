@@ -14,8 +14,24 @@
     </div>
 
     <div class = "lineLayout">
-           <h1>Gavgavka</h1>
-           <h1>Gavgavka</h1>
+        <div class="partnerRectangle">
+            <div class="partnerRectangleLayout">
+                <div class ="singleColumn">
+                    <h1 class = "partnerStyle">Gavgavka</h1>
+                </div>
+            
+                <div class="doubleСolumn">
+                    <div clas = "topItem">
+                        <h1 class = "partnerStyleDoubleColumnUp">Phone: +7 (952) 220-66-28</h1>
+                    </div>
+                    <div clas = "bottomItem">
+                        <h1 class = "partnerStyleDoubleColumnDown">This is very very cool thank you aabd wow wo cool</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+           
     </div>
 
         <div class= "divMarginTitle">
