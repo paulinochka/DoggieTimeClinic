@@ -7,8 +7,10 @@ import bottle
 import os
 import sys
 from addEvent import load_events
+from addPartners import load_partners
 
 events = {}
+partners = {}
 # routes contains the HTTP handlers for our server and must be imported.
 import routes
 
@@ -44,5 +46,6 @@ if __name__ == '__main__':
         return bottle.static_file(filepath, root=STATIC_ROOT)
 
     bottle.route('/events', ['GET', 'POST'], load_events,title="Events",year=datetime.now().year)
+    bottle.route('/partners', ['GET', 'POST'], load_partners,title="Partners",year=datetime.now().year)
     # Starts a local test server.
     bottle.run(server='wsgiref', host=HOST, port=PORT)

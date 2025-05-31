@@ -40,7 +40,7 @@ def load_events():
 
         if all([title, organiser, phone, description]):
             update_json(title, organiser, phone, description)
-            events = json_to_list()  # Обновляем события после добавления
+            events = json_to_list()  # РћР±РЅРѕРІР»СЏРµРј СЃРѕР±С‹С‚РёСЏ РїРѕСЃР»Рµ РґРѕР±Р°РІР»РµРЅРёСЏ
 
     return template('events', events=events,title="Events",year=datetime.now().year)
 

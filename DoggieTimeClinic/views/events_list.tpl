@@ -1,8 +1,5 @@
 % for event, event_data in events.items():
-    <div class="eventsRectangle" onclick="showEventDetails(this, '{{ event }}')" 
-         data-organiser="{{ event_data['organiser'] }}"
-         data-phone="{{ event_data['phone'] }}"
-         data-description="{{ event_data['description'] }}">
+    <div class="eventsRectangle" onclick="showEventDetails(this, '{{ event }}')">
         <h1 class="eventsStyle">{{ event }}</h1>
         <div class="event-details" style="display: none;">
             <p><strong>Organiser:</strong> <span class="organiser">{{ event_data['organiser'] }}</span></p>

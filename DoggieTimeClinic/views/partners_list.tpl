@@ -1,13 +1,15 @@
-% for event, event_data in events.items():
-    <div class="eventsRectangle"
-         data-organiser="{{ event_data['organiser'] }}"
-         data-phone="{{ event_data['phone'] }}"
-         data-description="{{ event_data['description'] }}">
-        <h1 class="eventsStyle">{{ event }}</h1>
-        <div class="event-details">
-            <p><strong>Organiser:</strong> <span class="organiser">{{ event_data['organiser'] }}</span></p>
-            <p><strong>Phone:</strong> <span class="phone">{{ event_data['phone'] }}</span></p>
-            <p><strong>Description:</strong> <span class="description">{{ event_data['description'] }}</span></p>
+% for partner, partner_data in partners.items():
+    <div class="partnerRectangleLayout">
+        <div class ="singleColumn">
+            <h1 class = "partnerStyle">{{ partner }}</h1>
+        </div>
+        <div class="doubleСolumn">
+            <div clas = "topItem">
+                <h1 class = "partnerStyleDoubleColumnUp">Phone: {{ partner_data['phone'] }}</h1>
+            </div>
+            <div clas = "bottomItem">
+                <h1 class = "partnerStyleDoubleColumnDown">About me: {{ partner_data['description'] }}</h1>
+            </div>
         </div>
     </div>
 % end

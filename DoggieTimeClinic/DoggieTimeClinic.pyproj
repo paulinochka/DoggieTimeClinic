@@ -33,6 +33,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="app.py" />
+    <Compile Include="addPartners.py" />
     <Compile Include="routes.py" />
   </ItemGroup>
   <ItemGroup>

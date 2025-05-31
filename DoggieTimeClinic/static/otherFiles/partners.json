@@ -1,22 +1,10 @@
 {
     "New Doggy Goggy": {
-        "organiser": "Polina24",
         "phone": "+7 (952) 220-66-28",
         "description": "An amazing event dedicated to the opening of our clinic"
     },
-    "First Client": {
-        "organiser": "Pavel",
-        "phone": "+7 (163) 736-98-10",
-        "description": "The first client of our clinic"
-    },
-    "Something new": {
-        "organiser": "Nikita",
-        "phone": "+7 (931) 991-64-62",
-        "description": "Something new was happened"
-    },
-    "Event": {
-        "organiser": "Eventerer",
-        "phone": "+7 (122) 812-27-23",
-        "description": "Superer"
+    "sdfzFD": {
+        "phone": "sdfsadf",
+        "description": "fsadfsdf"
     }
 }

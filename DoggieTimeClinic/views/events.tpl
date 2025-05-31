@@ -43,7 +43,7 @@
                         <div class ="center">
                             <div class="textareaRow">
                                 <textarea class="inputStyle" type="text" name="describe" placeholder="Describe the event" required></textarea>
-                                <button type="submit" class="middleButton" ><span>Send</span></a>
+                                <button type="submit" class="middleButton"><span>Send</span></button
                             </div>
                         </div>
                     </form>
