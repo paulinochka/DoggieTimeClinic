@@ -212,7 +212,7 @@ input[type="checkbox"].input-validation-error {
     font-size: 40px;
     text-align: center;
 }
-
+    
 
 .selectEventsStyle {
     color: white;
@@ -380,3 +380,10 @@ input[type="checkbox"].input-validation-error {
             opacity: 1;
             right: 0;
         }
+
+.lineLayout {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+    width: 100%;
+}

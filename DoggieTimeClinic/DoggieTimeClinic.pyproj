@@ -49,6 +49,7 @@
     <Content Include="static\content\bootstrap.css" />
     <Content Include="static\content\bootstrap.min.css" />
     <Content Include="static\content\site.css" />
+    <Content Include="static\otherFiles\partners.json" />
     <Content Include="static\otherFiles\events.json" />
     <Content Include="static\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="static\fonts\glyphicons-halflings-regular.svg" />
@@ -81,6 +82,9 @@
     <Content Include="views\layout.tpl" />
     <Content Include="views\events.tpl" />
     <Content Include="views\partners.tpl" />
+    <Content Include="views\partners_list.tpl">
+      <SubType>Code</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="ClinicTwo\">

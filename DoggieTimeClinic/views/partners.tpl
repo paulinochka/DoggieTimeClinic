@@ -13,14 +13,10 @@
         <div class="line"></div>
     </div>
 
-    <div class = "divInputMargin">
-        <div class="center">
-            <div class="partnersListContainer">
-                <div class="partnersListChange">
-                    <h1 class="partnerStyle">Gavgavka</h1>
-                </div>
-            </div>
-        </div>
+    <div class = "lineLayout">
+           <h1>Gavgavka</h1>
+           <h1>Gavgavka</h1>
+    </div>
 
         <div class= "divMarginTitle">
             <div class="center">
