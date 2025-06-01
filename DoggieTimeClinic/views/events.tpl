@@ -43,12 +43,13 @@
                         <div class ="center">
                             <div class="textareaRow">
                                 <textarea class="inputStyle" type="text" name="describe" placeholder="Describe the event" required></textarea>
-                                <button type="submit" class="middleButton"><span>Send</span></button
+                                <button type="submit" class="middleButton"><span>Send</span></button>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
+        </div>
     </div>
     
 </body>

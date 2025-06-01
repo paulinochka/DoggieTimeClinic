@@ -3,6 +3,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/content/bootstrap.css" />
+     <script src = "static/scripts/partnersActivity.js"></script>
 </head>
 
 <body>
@@ -14,14 +15,11 @@
     </div>
 
     <div class = "lineLayout">
-        <div class="partnerRectangle">
             % if partners:
                 % include('partners_list.tpl', partners=partners)
             % end
-        </div>
     </div>
-           
-    </div>
+
 
         <div class= "divMarginTitle">
             <div class="center">
@@ -49,5 +47,5 @@
                     </form>
                 </div>
             </div>
-    </div>
+        </div>
 </body>
