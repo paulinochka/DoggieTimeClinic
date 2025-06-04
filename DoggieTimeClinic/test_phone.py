@@ -1,7 +1,7 @@
 import unittest
 from addPartners import validate_phone 
 
-class Pnone_true_Test(unittest.TestCase):
+class Phone_true_Test(unittest.TestCase):
     def test_is_match1(self):
         self.assertTrue(validate_phone("89319916462"))
 
@@ -23,7 +23,7 @@ class Pnone_true_Test(unittest.TestCase):
     def test_is_match7(self):
         self.assertTrue(validate_phone("+7(565) 677 67-67"))
 
-class Pnone_false_Test(unittest.TestCase):
+class Phone_false_Test(unittest.TestCase):
     def test_is_not_match1(self):
         self.assertFalse(validate_phone("79319916462"))
 
