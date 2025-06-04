@@ -1,3 +1,4 @@
+from asyncio.windows_events import NULL
 from datetime import datetime
 from bottle import route, template, post, request
 import json
@@ -5,6 +6,7 @@ import re
 from pathlib import Path
 
 path = Path('static/otherFiles/partners.json') 
+errors = {}
 def update_json(name,phone,description):
     try:
         partners = json.loads(path.read_text(encoding='utf-8'))
@@ -29,15 +31,59 @@ def json_to_list():
 @route('/partners')
 @post('/partners',method='post')
 def load_partners():
-    partners = json_to_list()
     
-    if request.method == 'POST':
-        name = request.forms.get('name')
-        phone = request.forms.get('phone')
-        description = request.forms.get('describe')
+        partners = json_to_list()
+    
+        if request.method == 'POST':
+            name = request.forms.get('name')
+            phone = request.forms.get('phone')
+            description = request.forms.get('describe')
 
-        if all([name, phone, description]):
-            update_json(name, phone, description)
-            partners = json_to_list()
+            if all([name, phone, description]):
+                if(len(check_partners(name, phone, description)) == 0):
+                    update_json(name, ''.join(re.split(r'[- \(\)]+',phone)) , description)
+                    partners = json_to_list()
+                else:
+                    return f"""
+                    <script>
+                        alert("{check_partners(name, phone, description)}");
+                        window.history.back();
+                    </script>
+                    """
+        return template('partners', partners=partners,title="Partners",year=datetime.now().year)
 
-    return template('partners', partners=partners,title="Partners",year=datetime.now().year)
+def check_partners(name, phone, description):
+    # try:
+        error_message = ""
+        if name == NULL:
+            errors['name'] = "Enter name"
+            error_message += "Enter name"
+
+        if len(name) > 50:
+            errors['name'] = "Name is too long (>50 symbols)"
+            error_message += "Name is too long (>50 symbols)"
+
+        if (re.search('[а-яА-ЯёЁ]', name)):
+            errors['name'] = "There are Russian symbols"
+            error_message += "There are Russian symbols"
+            
+        if not validate_phone(phone):
+            errors['phone'] = "Wrong phone number"
+            error_message += "Wrong phone number"
+            
+        if len(description) > 500:
+            errors['description'] = "Description is too long (>500 symbols)"
+            error_message += "Description is too long (>500 symbols)"
+
+        if (re.search('[а-яА-ЯёЁ]', description)):
+            errors['name'] = "There are Russian symbols"
+            error_message += "There are Russian symbols"
+
+        return error_message
+    # except Exception as e:
+    #     flag = False
+    #     return flag
+
+def validate_phone(phone):
+    pattern = re.compile(r'^(\+7|8)[-\s]?(\d{3}|\(\d{3}\))[-\s]?\d{3}[-\s]?\d\d[-\s]?\d\d$')
+    return re.fullmatch(pattern, phone) is not None

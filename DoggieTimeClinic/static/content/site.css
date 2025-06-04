@@ -375,6 +375,9 @@ input[type="checkbox"].input-validation-error {
 
 .topItem, .bottomItem {
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .partnerStyle {
@@ -458,3 +461,4 @@ input[type="checkbox"].input-validation-error {
     gap: 30px;
     width: 100%;
 }
+
