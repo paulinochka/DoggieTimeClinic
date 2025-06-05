@@ -53,36 +53,30 @@ def load_partners():
         return template('partners', partners=partners,title="Partners",year=datetime.now().year)
 
 def check_partners(name, phone, description):
-    # try:
+    try:
         error_message = ""
         if name == NULL:
-            errors['name'] = "Enter name"
-            error_message += "Enter name"
+            error_message += "Enter name "
 
         if len(name) > 50:
-            errors['name'] = "Name is too long (>50 symbols)"
-            error_message += "Name is too long (>50 symbols)"
+            error_message += "Name is too long (>50 symbols) "
 
         if (re.search('[а-яА-ЯёЁ]', name)):
-            errors['name'] = "There are Russian symbols"
-            error_message += "There are Russian symbols"
+            error_message += "There are Russian symbols "
             
         if not validate_phone(phone):
-            errors['phone'] = "Wrong phone number"
-            error_message += "Wrong phone number"
+            error_message += "Wrong phone number "
             
         if len(description) > 500:
-            errors['description'] = "Description is too long (>500 symbols)"
-            error_message += "Description is too long (>500 symbols)"
+            error_message += "Description is too long (>500 symbols) "
 
         if (re.search('[а-яА-ЯёЁ]', description)):
-            errors['name'] = "There are Russian symbols"
-            error_message += "There are Russian symbols"
+            error_message += "There are Russian symbols "
 
         return error_message
-    # except Exception as e:
-    #     flag = False
-    #     return flag
+    except Exception as e:
+        error_message += e
+        return error_message
 
 def validate_phone(phone):
     pattern = re.compile(r'^(\+7|8)[-\s]?(\d{3}|\(\d{3}\))[-\s]?\d{3}[-\s]?\d\d[-\s]?\d\d$')

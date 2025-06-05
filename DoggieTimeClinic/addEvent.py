@@ -1,9 +1,12 @@
 from datetime import datetime
+from os import error
+from addPartners import NULL
 from bottle import route, template, post, request
 import json
 import re
 from pathlib import Path
 
+error_message = ""
 path = Path('static/otherFiles/events.json') 
 def update_json(title,organiser,phone,description):
     try:
@@ -39,9 +42,48 @@ def load_events():
         description = request.forms.get('describe')
 
         if all([title, organiser, phone, description]):
-            update_json(title, organiser, phone, description)
-            events = json_to_list()  # Обновляем события после добавления
+                if(len(check_events(title, organiser, phone, description)) == 0):
+                    update_json(title, organiser, ''.join(re.split(r'[- \(\)]+',phone)) , description)
+                    events = json_to_list()
+                else:
+                    return f"""
+                    <script>
+                        alert("{check_events(title, organiser, phone, description)}");
+                        window.history.back();
+                    </script>
+                    """
 
     return template('events', events=events,title="Events",year=datetime.now().year)
+
+def check_events(title, organizer, phone, description):
+    try:
+        error_message = ""
+
+        if title == NULL:
+            error_message += "Enter title "
+
+        if len(title) > 50 or len(organizer) > 50:
+            error_message += "Name is too long (>50 symbols) "
+
+        if organizer == NULL:
+            error_message += "Enter organizers name "
+
+        if (re.search('[а-яА-Я]', title)) or (re.search('[а-яА-Я]', organizer) or (re.search('[а-яА-Я]', description))) :
+            error_message += "There are Russian symbols "
+            
+        if not validate_phone(phone):
+            error_message += "Wrong phone number "
+            
+        if len(description) > 500:
+            error_message += "Description is too long (>500 symbols) "
+
+        return error_message
+    except Exception as e:
+        error_message += e
+        return error_message
+
+def validate_phone(phone):
+    pattern = re.compile(r'^(\+7|8)[-\s]?(\d{3}|\(\d{3}\))[-\s]?\d{3}[-\s]?\d\d[-\s]?\d\d$')
+    return re.fullmatch(pattern, phone) is not None
 
 
