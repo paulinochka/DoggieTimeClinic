@@ -6,7 +6,7 @@ import re
 from pathlib import Path
 
 path = Path('static/otherFiles/partners.json') 
-errors = {}
+error_message = ""
 def update_json(name,phone,description):
     try:
         partners = json.loads(path.read_text(encoding='utf-8'))
@@ -58,7 +58,7 @@ def check_partners(name, phone, description):
         if name == NULL:
             error_message += "Enter name "
 
-        if len(name) > 50:
+        if len(name) >= 50:
             error_message += "Name is too long (>50 symbols) "
 
         if (re.search('[а-яА-ЯёЁ]', name)):
@@ -67,7 +67,7 @@ def check_partners(name, phone, description):
         if not validate_phone(phone):
             error_message += "Wrong phone number "
             
-        if len(description) > 500:
+        if len(description) >= 500:
             error_message += "Description is too long (>500 symbols) "
 
         if (re.search('[а-яА-ЯёЁ]', description)):

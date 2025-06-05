@@ -18,8 +18,10 @@
     <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
     <Name>DoggieTimeClinic</Name>
     <RootNamespace>DoggieTimeClinic</RootNamespace>
-    <InterpreterId>MSBuild|Clinic|$(MSBuildProjectFullPath)</InterpreterId>
-    <TestFramework>Pytest</TestFramework>
+    <InterpreterId>MSBuild|env1|$(MSBuildProjectFullPath)</InterpreterId>
+    <TestFramework>unittest</TestFramework>
+    <UnitTestPattern>test_*.py</UnitTestPattern>
+    <UnitTestRootDirectory>.</UnitTestRootDirectory>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -36,7 +38,7 @@
     <Compile Include="app.py" />
     <Compile Include="addPartners.py" />
     <Compile Include="routes.py" />
-    <Compile Include="unit_test.py">
+    <Compile Include="test_phone.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

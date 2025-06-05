@@ -1,6 +1,5 @@
 import unittest
 from addPartners import validate_phone 
-
 class Phone_true_Test(unittest.TestCase):
     def test_is_match1(self):
         self.assertTrue(validate_phone("89319916462"))
