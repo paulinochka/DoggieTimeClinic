@@ -19,6 +19,7 @@
     <Name>DoggieTimeClinic</Name>
     <RootNamespace>DoggieTimeClinic</RootNamespace>
     <InterpreterId>MSBuild|Clinic|$(MSBuildProjectFullPath)</InterpreterId>
+    <TestFramework>Pytest</TestFramework>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -35,6 +36,9 @@
     <Compile Include="app.py" />
     <Compile Include="addPartners.py" />
     <Compile Include="routes.py" />
+    <Compile Include="unit_test.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="static\" />
