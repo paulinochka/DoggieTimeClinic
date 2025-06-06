@@ -32,6 +32,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="active.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="addEvent.py">
       <SubType>Code</SubType>
     </Compile>
@@ -52,6 +55,7 @@
     <Folder Include="views\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="questions.json" />
     <Content Include="requirements.txt" />
     <Content Include="static\content\bootstrap.css" />
     <Content Include="static\content\bootstrap.min.css" />
