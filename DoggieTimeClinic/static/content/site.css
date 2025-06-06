@@ -193,7 +193,7 @@ input[type="checkbox"].input-validation-error {
         box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     }
     .eventsRectangle.active {
-        height: 300px; 
+        height: 350px; 
     }
 
 .event-details {
@@ -302,8 +302,8 @@ input[type="checkbox"].input-validation-error {
 
 
 .partnerRectangle {
-    width: 300px;
-    height: 100px; 
+    width: 700px;
+    height: 80px; 
     background-color: white;
     margin: 10px;
     cursor: pointer;
@@ -313,7 +313,7 @@ input[type="checkbox"].input-validation-error {
 
     .partnerRectangle.active {
         width: 900px;
-        height: 400px;
+        height: 450px;
         border: 2px solid black;
         border-radius: 8px;
     }
@@ -343,9 +343,9 @@ input[type="checkbox"].input-validation-error {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
     opacity: 0;
-    transition: opacity 0.5s ease 0.2s; /* Задержка для плавности */
+    transition: opacity 0.5s ease 0.2s;
     z-index: 1;
 }
 
@@ -370,7 +370,8 @@ input[type="checkbox"].input-validation-error {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
+    padding: 20px;
 }
 
 .topItem, .bottomItem {
