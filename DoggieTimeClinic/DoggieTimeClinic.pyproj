@@ -44,6 +44,9 @@
     <Compile Include="test_phone.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="test_valide_phone.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="static\" />
