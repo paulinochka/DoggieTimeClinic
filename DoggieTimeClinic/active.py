@@ -28,6 +28,13 @@ def load_questions():
         except json.JSONDecodeError:  
             return []
 
+def is_duplicate_question(new_question):
+    questions = load_questions()
+    return any(
+        q["question"].strip().lower() == new_question.strip().lower()
+        for q in questions
+    )
+
 def save_question(name, email, phone, question):
     data = load_questions()
     data.append({"name": name, "email": email, "phone": phone, "question": question})

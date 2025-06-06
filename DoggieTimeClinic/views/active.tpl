@@ -6,7 +6,7 @@
     <div class="container">
         <div class="form-container">
             <h1>Ask the Vet</h1>
-            <form method="POST" action="/">
+            <form method="POST" action="/active">
                 <div class="form-group">
                     <label>Name:</label>
                     <input type="text" name="name" value="{{name}}" required>
