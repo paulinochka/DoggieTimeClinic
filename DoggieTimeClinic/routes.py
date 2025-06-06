@@ -2,8 +2,10 @@
 Routes and views for the bottle application.
 """
 
+from tempfile import template
 from bottle import route, view
 from datetime import datetime
+from active import is_valid_email, is_valid_phone, load_questions, request, save_question
 
 @route('/')
 @route('/home')
@@ -54,12 +56,35 @@ def usefulText():
         year=datetime.now().year
     )
 
-@route('/active')
+@route('/active', method=['GET', 'POST'])
 @view('active')
-def usefulText():
-    """Renders the active page."""
+def active():
+    errors = {}
+    name = request.forms.get('name', '').strip()
+    email = request.forms.get('email', '').strip()
+    phone = request.forms.get('phone', '').strip()
+    question = request.forms.get('question', '').strip()
+
+    if request.method == 'POST':
+        if not name: 
+            errors['name'] = "Name required"
+        if not is_valid_email(email): 
+            errors['email'] = "Invalid email"
+        if not is_valid_phone(phone): 
+            errors['phone'] = "Invalid phone"
+        if not question: 
+            errors['question'] = "Question required"
+
+        if not errors:
+            save_question(name, email, phone, question)
+
+    questions = load_questions()
     return dict(
-        title='Active',
-        message='Yours active right here',
-        year=datetime.now().year
+        name=name,
+        email=email,
+        phone=phone,
+        question=question,
+        errors=errors,
+        questions=questions
     )
+   

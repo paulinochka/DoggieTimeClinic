@@ -57,6 +57,7 @@
   <ItemGroup>
     <Content Include="questions.json" />
     <Content Include="requirements.txt" />
+    <Content Include="static\content\active.css" />
     <Content Include="static\content\bootstrap.css" />
     <Content Include="static\content\bootstrap.min.css" />
     <Content Include="static\content\site.css" />
