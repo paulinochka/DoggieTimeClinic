@@ -33,4 +33,7 @@ def save_question(name, email, phone, question):
     data.append({"name": name, "email": email, "phone": phone, "question": question})
     with open(QUESTIONS_FILE, 'w') as f:
         json.dump(data, f, indent=2)
+@app.route('/static/<filename:path>')
+def serve_static(filename):
+    return static_file(filename, root='./static')
 

@@ -1,6 +1,6 @@
 <head>
     <title>Vet Clinic</title>
-    <link rel="stylesheet" href="static/active.css">
+    <link rel="stylesheet" href="\static\content\active.css">
 </head>
 <body>
     <div class="container">
@@ -39,7 +39,7 @@
                     % end
                 </div>
 
-                <button type="submit">Submit</button>
+                <button type="submit">Send</button>
             </form>
         </div>
 
